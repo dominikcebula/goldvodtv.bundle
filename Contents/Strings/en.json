@@ -1,0 +1,7 @@
+{
+  "Login": "GoldVODtv Login",
+  "Password": "GoldVODtv Password",
+  "Use HD Streams when available": "Use HD Streams when available",
+  "NoChannels": "No channels were fetched from VOD service, please check if your account has active subscription.",
+  "NoCredentials": "You need to setup username and password in plugin settings first"
+}

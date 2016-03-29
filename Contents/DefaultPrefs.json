@@ -1,0 +1,21 @@
+[
+  {
+    "id": "login",
+    "label": "GoldVODtv Login",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "id": "password",
+    "label": "GoldVODtv Password",
+    "type": "text",
+    "option": "hidden",
+    "default": ""
+  },
+  {
+    "id": "use_hd",
+    "label": "Use HD Streams when available",
+    "type": "bool",
+    "default": "true"
+  }
+]
