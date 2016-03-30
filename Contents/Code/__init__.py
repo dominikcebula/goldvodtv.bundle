@@ -63,7 +63,7 @@ def displayChannels(oc, channels):
 
 
 def getChannelUrl(channel):
-    if Prefs['use_hd']:
+    if Prefs['use_hd'] and channel['url_hd']:
         return channel['url_hd']
     else:
         return channel['url_sd']
@@ -81,7 +81,7 @@ def createVideoClipObject(title, url, thumb, container=False):
             MediaObject(
                 parts=[
                     PartObject(
-                        key=GetVideoURL(url=url)
+                        key=HTTPLiveStreamURL(url=url)
                     )
                 ],
                 optimized_for_streaming=True
@@ -92,13 +92,6 @@ def createVideoClipObject(title, url, thumb, container=False):
         return ObjectContainer(objects=[videoClipObject])
     else:
         return videoClipObject
-
-
-def GetVideoURL(url):
-    if url.startswith('rtmp'):
-        return RTMPVideoURL(url=url, live=True)
-    else:
-        return HTTPLiveStreamURL(url=url)
 
 
 def credentialsAreInvalid(username, password):
